@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOLT.NEW × FIGMA — Design to Code</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Custom Mouse Cursor -->
+    <div id="cursor-core"></div>
+    <div id="cursor-glow"></div>
+    <div id="cursor-trails"></div>
+    <div id="ripple-container"></div>
+
+    <!-- Animated Backgrounds -->
+    <div class="noise-bg"></div>
+    <div class="grid-bg"></div>
+
+    <!-- Global Ambient Orbs -->
+    <div class="global-orb large-orb"></div>
+    <div class="global-orb small-orb-1"></div>
+    <div class="global-orb small-orb-2"></div>
+
+    <div class="presentation-container" id="presentation-container">
+        
+        <!-- Slide 1: Hero -->
+        <section class="slide active" id="slide-1">
+            <!-- Unique Shape: Triangle -->
+            <div class="floating-shape shape-triangle"></div>
+
+            <div class="card glass-card hero-card floating-element">
+                <div class="heading-wrapper">
+                    <h1 class="main-heading text-3d center-text">BOLT.NEW × FIGMA</h1>
+                </div>
+                <div class="heading-wrapper">
+                    <h2 class="sub-heading glow-text-cyan center-text">Design to Code</h2>
+                </div>
+                
+                <div class="badge glow-purple main-badge floating-element">⚡ Design × Code × AI</div>
+                
+                <div class="content-wrapper">
+                    <p class="body-text left-text hero-desc">Import your Figma designs → bolt.new converts them to real production code</p>
+                </div>
+                
+                <div class="badges floating-element">
+                    <span class="badge glow-cyan">figma.com</span>
+                    <span class="badge glow-amber">bolt.new</span>
+                    <span class="badge glow-violet">AI-powered</span>
+                </div>
+                
+                <div class="footer-note center-text">bolt.new · figma.com · Design to Code Workflow</div>
+            </div>
+            
+            <div class="logos-3d-container">
+                <div class="logo-3d figma-logo">🎨</div>
+                <div class="logo-3d bolt-logo">⚡</div>
+            </div>
+        </section>
+
+        <!-- Slide 2: What is Bolt.new -->
+        <section class="slide" id="slide-2">
+            <!-- Unique Shape: Ring -->
+            <div class="floating-shape shape-ring"></div>
+
+            <div class="section-label glow-text-purple">01 — WHAT IS BOLT.NEW</div>
+            <div class="side-by-side">
+                <div class="panel glass-card left-panel floating-element">
+                    <div class="heading-wrapper">
+                        <h2 class="title text-3d center-text">AI Full-Stack Dev Environment</h2>
+                    </div>
+                    <div class="content-wrapper">
+                        <p class="body-text left-text">Bolt.new is a browser-based AI development environment by StackBlitz. It lets you prompt, run, edit, and deploy full-stack web apps entirely in your browser with zero local setup.</p>
+                        <ul class="feature-list left-text">
+                            <li class="glow-row">⚡ Full-stack in browser</li>
+                            <li class="glow-row">🤖 AI writes the code</li>
+                            <li class="glow-row">🚀 One-click deploy</li>
+                            <li class="glow-row">🔗 Import from Figma</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel terminal-window right-panel glass-card floating-element">
+                    <div class="terminal-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="term-title">bolt.new — AI Dev Environment</span>
+                    </div>
+                    <div class="terminal-body content-wrapper">
+                        <pre class="code-green left-text"><code>$ create react app with tailwind
+✓ Generating components...
+✓ Installing dependencies...
+✓ Setting up Tailwind CSS...
+→ App running on localhost:3000</code></pre>
+                    </div>
+                    <div class="terminal-input glow-violet-border">
+                        <span class="prompt-icon">✨</span>
+                        <input type="text" value="Build a portfolio site with dark mode using my Figma design" disabled />
+                        <button class="generate-btn glow-amber-bg">⚡ Generate</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 3: What is Figma -->
+        <section class="slide" id="slide-3">
+            <!-- Unique Shape: Cube -->
+            <div class="floating-shape shape-cube">
+                <div class="cube-face front"></div>
+                <div class="cube-face back"></div>
+                <div class="cube-face right"></div>
+                <div class="cube-face left"></div>
+                <div class="cube-face top"></div>
+                <div class="cube-face bottom"></div>
+            </div>
+
+            <div class="section-label glow-text-cyan">02 — WHAT IS FIGMA</div>
+            
+            <div class="card glass-card center-card floating-element">
+                <div class="heading-wrapper">
+                    <h1 class="slide-title text-3d center-text">The World's #1 Design Tool</h1>
+                </div>
+                <div class="content-wrapper">
+                    <p class="body-text left-text">Figma is a cloud-based collaborative design tool. Create UI/UX designs, prototypes, and design systems then export your work directly into Bolt.new as a working app.</p>
+                </div>
+                
+                <div class="figma-features center-text">
+                    <div class="feature-node glass-card red-node floating-element">🔴 Component</div>
+                    <div class="feature-node glass-card blue-node floating-element">🔵 Auto Layout</div>
+                    <div class="feature-node glass-card green-node floating-element">🟢 Variables</div>
+                    <div class="feature-node glass-card purple-node floating-element">🟣 Dev Mode</div>
+                </div>
+
+                <div class="figma-editor glow-violet-border glass-card floating-element">
+                    <div class="figma-toolbar left-text">Figma › MyProject › Homepage</div>
+                    <div class="figma-body">
+                        <div class="figma-left left-text">Layers<br><br>Frame<br>Hero<br>Nav<br>Footer</div>
+                        <div class="figma-center center-text">Hero Section</div>
+                        <div class="figma-right left-text">Properties<br><br>W 1440<br>H 900<br>Fill #1C1C2E</div>
+                    </div>
+                </div>
+
+                <div class="tags-container center-text floating-element">
+                    <span class="tag glow-border">UI Design</span>
+                    <span class="tag glow-border">Prototyping</span>
+                    <span class="tag glow-border">Dev Handoff</span>
+                    <span class="tag glow-border">Design System</span>
+                </div>
+                <div class="footer-link center-text">figma.com → The collaborative interface design tool</div>
+            </div>
+        </section>
+
+        <!-- Slide 4: The Workflow -->
+        <section class="slide" id="slide-4">
+            <!-- Unique Shape: Pyramid -->
+            <div class="floating-shape shape-pyramid">
+                <div class="pyramid-face front"></div>
+                <div class="pyramid-face back"></div>
+                <div class="pyramid-face right"></div>
+                <div class="pyramid-face left"></div>
+                <div class="pyramid-base"></div>
+            </div>
+
+            <div class="section-label glow-text-amber">03 — THE WORKFLOW</div>
+            <div class="heading-wrapper">
+                <h2 class="slide-title-sm text-3d center-text">Figma Design → Bolt.new → Production App</h2>
+            </div>
+            
+            <div class="wave-container workflow-cards">
+                <div class="wave-card glass-card glow-purple-top floating-element">
+                    <div class="step-num">01</div>
+                    <div class="badge-icon">🎨</div>
+                    <h3 class="center-text">Design in Figma</h3>
+                    <p class="left-text body-text-small">Create your UI with components, auto layout & variables</p>
+                </div>
+                <div class="wave-card glass-card glow-cyan-top floating-element">
+                    <div class="step-num">02</div>
+                    <div class="badge-icon">🔗</div>
+                    <h3 class="center-text">Export / Copy Link</h3>
+                    <p class="left-text body-text-small">Use Figma's share link or export assets</p>
+                </div>
+                <div class="wave-card center-highlight glass-card glow-amber-top floating-element">
+                    <div class="step-num">03</div>
+                    <div class="badge-icon">⚡</div>
+                    <h3 class="center-text">Open Bolt.new</h3>
+                    <p class="left-text body-text-small">Visit bolt.new and start a new project</p>
+                </div>
+                <div class="wave-card glass-card glow-violet-top floating-element">
+                    <div class="step-num">04</div>
+                    <div class="badge-icon">🤖</div>
+                    <h3 class="center-text">Paste & Prompt AI</h3>
+                    <p class="left-text body-text-small">Paste Figma link + describe what you want built</p>
+                </div>
+                <div class="wave-card glass-card glow-teal-top floating-element">
+                    <div class="step-num">05</div>
+                    <div class="badge-icon">🚀</div>
+                    <h3 class="center-text">Deploy & Ship</h3>
+                    <p class="left-text body-text-small">Preview live, tweak code, deploy in one click</p>
+                </div>
+            </div>
+            <div class="bottom-note glow-text-amber center-text floating-element">Total time from design to deployed app: under 10 minutes</div>
+        </section>
+
+        <!-- Slide 5: Deep Dive -->
+        <section class="slide" id="slide-5">
+            <!-- Unique Shape: Helix (Simulated with rotating nested elements) -->
+            <div class="floating-shape shape-helix">
+                <div class="helix-strand"></div>
+                <div class="helix-strand offset"></div>
+            </div>
+
+            <div class="section-label glow-text-purple">04 — FIGMA → BOLT.NEW</div>
+            <div class="heading-wrapper">
+                <h1 class="slide-title text-3d center-text">How the Import Actually Works</h1>
+            </div>
+            
+            <div class="deep-dive-container">
+                <div class="deep-panel figma-side glass-card floating-element">
+                    <h3 class="glow-text-purple center-text heading-wrapper">🎨 FIGMA</h3>
+                    <div class="content-wrapper">
+                        <ul class="comparison-list left-text">
+                            <li><span class="highlight">Frame / Component</span> → Your UI building block</li>
+                            <li><span class="highlight">Design Tokens</span> → Colors, spacing, type scales</li>
+                            <li><span class="highlight">Auto Layout</span> → Responsive structure</li>
+                            <li><span class="highlight">Prototype Links</span> → Interaction flows</li>
+                            <li><span class="highlight">Assets / Icons</span> → SVG exports</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="energy-arrow center-text floating-element">
+                    <div class="pulse-line"></div>
+                    <span class="glow-text-cyan">→ AI Parsed</span>
+                </div>
+
+                <div class="deep-panel bolt-side glass-card floating-element">
+                    <h3 class="glow-text-amber center-text heading-wrapper">⚡ BOLT.NEW OUTPUT</h3>
+                    <div class="content-wrapper">
+                        <ul class="comparison-list left-text">
+                            <li><span class="highlight">React Components</span> → JSX with props & state</li>
+                            <li><span class="highlight">Tailwind CSS Classes</span> → Pixel-perfect styling</li>
+                            <li><span class="highlight">Responsive Layout</span> → Mobile-first grid/flex</li>
+                            <li><span class="highlight">Route Structure</span> → Pages & navigation</li>
+                            <li><span class="highlight">Asset Imports</span> → Images & icon refs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 6: Features -->
+        <section class="slide" id="slide-6">
+            <!-- Unique Shape: Octahedron -->
+            <div class="floating-shape shape-octahedron">
+                <div class="octa-face top-front"></div>
+                <div class="octa-face top-back"></div>
+                <div class="octa-face top-right"></div>
+                <div class="octa-face top-left"></div>
+                <div class="octa-face bottom-front"></div>
+                <div class="octa-face bottom-back"></div>
+                <div class="octa-face bottom-right"></div>
+                <div class="octa-face bottom-left"></div>
+            </div>
+
+            <div class="section-label glow-text-amber">05 — WHY THIS COMBO WINS</div>
+            <div class="heading-wrapper">
+                <h1 class="slide-title text-3d center-text glow-text-amber">Superpower Stack for Designers</h1>
+            </div>
+            
+            <div class="features-grid six-cards">
+                <div class="feature-card glass-card glow-amber-top floating-element">
+                    <div class="icon">⚡</div>
+                    <h3 class="center-text">Zero Dev Setup</h3>
+                    <div class="content-wrapper">
+                        <p class="left-text body-text-small">No Node.js, no terminal, no local environment. Just a browser tab.</p>
+                    </div>
+                </div>
+                <div class="feature-card glass-card glow-violet-top floating-element">
+                    <div class="icon">🧠</div>
+                    <h3 class="center-text">AI Understands Design</h3>
+                    <div class="content-wrapper">
+                        <p class="left-text body-text-small">Bolt's AI reads Figma structure and generates accurate component trees.</p>
+                    </div>
+                </div>
+                <div class="feature-card glass-card glow-teal-top floating-element">
+                    <div class="icon">🔄</div>
+                    <h3 class="center-text">Iterate Fast</h3>
+                    <div class="content-wrapper">
+                        <p class="left-text body-text-small">Make a change in Figma, reprompt in Bolt — updates in seconds.</p>
+                    </div>
+                </div>
+                <div class="feature-card glass-card glow-cyan-top floating-element">
+                    <div class="icon">🎯</div>
+                    <h3 class="center-text">Designer-Friendly</h3>
+                    <div class="content-wrapper">
+                        <p class="left-text body-text-small">No need to learn React or Tailwind — the AI handles the tech layer.</p>
+                    </div>
+                </div>
+                <div class="feature-card glass-card glow-green-top floating-element">
+                    <div class="icon">📦</div>
+                    <h3 class="center-text">Production Ready</h3>
+                    <div class="content-wrapper">
+                        <p class="left-text body-text-small">Bolt generates clean, deployable code — not just prototypes.</p>
+                    </div>
+                </div>
+                <div class="feature-card glass-card glow-red-top floating-element">
+                    <div class="icon">🚀</div>
+                    <h3 class="center-text">One-Click Deploy</h3>
+                    <div class="content-wrapper">
+                        <p class="left-text body-text-small">Deploy to Netlify, Vercel, or StackBlitz directly from the editor.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 7: CTA -->
+        <section class="slide" id="slide-7">
+            <!-- Unique Shape: Sphere -->
+            <div class="floating-shape shape-sphere"></div>
+
+            <div class="card glass-card cta-card floating-element">
+                <div class="heading-wrapper">
+                    <h1 class="cta-title text-3d center-text">START BUILDING<br>TODAY</h1>
+                </div>
+                <div class="content-wrapper">
+                    <p class="cta-sub center-text">Design it in Figma → Ship it with Bolt.new</p>
+                </div>
+                
+                <div class="cta-buttons floating-element">
+                    <button class="glow-btn figma-btn">🎨 figma.com</button>
+                    <button class="glow-btn bolt-btn">⚡ bolt.new</button>
+                </div>
+                
+                <div class="floating-labels">
+                    <span class="label drift-left floating-element">Design System</span>
+                    <span class="label drift-right floating-element">AI-Generated Code</span>
+                </div>
+                
+                <div class="cta-footer center-text floating-element">From Design to Deployed — Figma + Bolt.new · 2025</div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Controls -->
+    <div class="controls floating-element">
+        <button id="prev-btn" class="nav-btn">&larr;</button>
+        <div class="progress-dots" id="progress-dots"></div>
+        <button id="next-btn" class="nav-btn">&rarr;</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
