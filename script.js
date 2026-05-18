@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     // --- BACKGROUND STARFIELD GENERATION ---
     const starfield = document.getElementById('starfield');
-    for (let i = 0; i < 200; i++) {
+    const starCount = window.innerWidth < 768 ? 120 : 200;
+    for (let i = 0; i < starCount; i++) {
         const star = document.createElement('div');
         star.classList.add('star');
         
@@ -160,6 +161,28 @@ document.addEventListener('DOMContentLoaded', () => {
         else if (e.key === 'ArrowLeft') prevSlide();
     });
 
+    // --- TOUCH NAVIGATION (SWIPE GESTURES) ---
+    let touchStartX = 0;
+    let touchStartY = 0;
+    document.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].clientX;
+        touchStartY = e.changedTouches[0].clientY;
+    }, { passive: true });
+    document.addEventListener('touchend', (e) => {
+        if (isTransitioning) return;
+        const touchEndX = e.changedTouches[0].clientX;
+        const touchEndY = e.changedTouches[0].clientY;
+        const diffX = touchEndX - touchStartX;
+        const diffY = touchEndY - touchStartY;
+        if (Math.abs(diffX) > Math.abs(diffY)) {
+            if (diffX < -50) {
+                nextSlide();
+            } else if (diffX > 50) {
+                prevSlide();
+            }
+        }
+    }, { passive: true });
+
     // --- CUSTOM CURSOR & TRAILS ---
     const cursorCore = document.getElementById('cursor-core');
     const cursorGlow = document.getElementById('cursor-glow');
@@ -173,12 +196,14 @@ document.addEventListener('DOMContentLoaded', () => {
     let lastTrailTime = 0;
 
     document.addEventListener('mouseover', (e) => {
+        if ('ontouchstart' in window) return;
         if (e.target.closest('.clickable') || e.target.closest('button')) {
             cursorGlow.classList.add('hover-active');
             cursorCore.classList.add('hover-active');
         }
     });
     document.addEventListener('mouseout', (e) => {
+        if ('ontouchstart' in window) return;
         if (e.target.closest('.clickable') || e.target.closest('button')) {
             cursorGlow.classList.remove('hover-active');
             cursorCore.classList.remove('hover-active');
@@ -186,6 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.addEventListener('mousemove', (e) => {
+        if ('ontouchstart' in window) return;
         mouseX = e.clientX;
         mouseY = e.clientY;
         
@@ -227,6 +253,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     document.addEventListener('mousedown', (e) => {
+        if ('ontouchstart' in window) return;
         const ripple = document.createElement('div');
         ripple.className = 'cursor-ripple';
         ripple.style.left = e.clientX + 'px';
@@ -244,6 +271,10 @@ document.addEventListener('DOMContentLoaded', () => {
         time += 0.02;
         
         floatingShapes.forEach(shape => {
+            if (window.innerWidth < 768 || 'ontouchstart' in window) {
+                shape.classList.remove('hover-proximity');
+                return;
+            }
             const rect = shape.getBoundingClientRect();
             const cx = rect.left + rect.width/2;
             const cy = rect.top + rect.height/2;
@@ -256,32 +287,34 @@ document.addEventListener('DOMContentLoaded', () => {
         floatingElements.forEach((el, index) => {
             if(el.classList.contains('fixed-nav')) return; 
 
-            const rect = el.getBoundingClientRect();
-            const elCenterX = rect.left + rect.width / 2;
-            const elCenterY = rect.top + rect.height / 2;
-            
-            const dx = mouseX - elCenterX;
-            const dy = mouseY - elCenterY;
-            const distance = Math.hypot(dx, dy);
-            
             let repelX = 0, repelY = 0, tiltX = 0, tiltY = 0;
             
-            if (distance < 150) {
-                const force = (150 - distance) / 150; 
-                repelX = -(dx / distance) * force * 30; 
-                repelY = -(dy / distance) * force * 30;
-            }
-            
-            if (distance < 400 && el.classList.contains('glass-card')) {
-                tiltX = -(dy / rect.height) * 15; 
-                tiltY = (dx / rect.width) * 15;   
-                tiltX = Math.max(-15, Math.min(15, tiltX));
-                tiltY = Math.max(-15, Math.min(15, tiltY));
-            } else if (distance < 200 && !el.classList.contains('glass-card')) {
-                tiltX = -(dy / rect.height) * 20;
-                tiltY = (dx / rect.width) * 20;
-                tiltX = Math.max(-20, Math.min(20, tiltX));
-                tiltY = Math.max(-20, Math.min(20, tiltY));
+            if (window.innerWidth >= 768 && !('ontouchstart' in window)) {
+                const rect = el.getBoundingClientRect();
+                const elCenterX = rect.left + rect.width / 2;
+                const elCenterY = rect.top + rect.height / 2;
+                
+                const dx = mouseX - elCenterX;
+                const dy = mouseY - elCenterY;
+                const distance = Math.hypot(dx, dy);
+                
+                if (distance < 150) {
+                    const force = (150 - distance) / 150; 
+                    repelX = -(dx / distance) * force * 30; 
+                    repelY = -(dy / distance) * force * 30;
+                }
+                
+                if (distance < 400 && el.classList.contains('glass-card')) {
+                    tiltX = -(dy / rect.height) * 15; 
+                    tiltY = (dx / rect.width) * 15;   
+                    tiltX = Math.max(-15, Math.min(15, tiltX));
+                    tiltY = Math.max(-15, Math.min(15, tiltY));
+                } else if (distance < 200 && !el.classList.contains('glass-card')) {
+                    tiltX = -(dy / rect.height) * 20;
+                    tiltY = (dx / rect.width) * 20;
+                    tiltX = Math.max(-20, Math.min(20, tiltX));
+                    tiltY = Math.max(-20, Math.min(20, tiltY));
+                }
             }
             
             const bobOffset = Math.sin(time + index) * 8; 
