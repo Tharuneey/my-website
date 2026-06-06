@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tharun Ram | UI/UX Designer Portfolio</title>
+    <meta name="description" content="Portfolio of Tharun Ram, a passionate UI/UX Designer based in Chennai. Specializing in user-centered design, wireframing, prototyping, and seamless digital experiences.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%230a0a0f'/><text x='10' y='72' font-family='Sora,Inter,sans-serif' font-size='48' font-weight='700' fill='white'>TR</text><text x='78' y='72' font-family='Sora,Inter,sans-serif' font-size='56' font-weight='700' fill='%237B5CF0'>.</text></svg>"/>
+    <link rel="shortcut icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%230a0a0f'/><text x='10' y='72' font-family='Sora,Inter,sans-serif' font-size='48' font-weight='700' fill='white'>TR</text><text x='78' y='72' font-family='Sora,Inter,sans-serif' font-size='56' font-weight='700' fill='%237B5CF0'>.</text></svg>"/>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Tabler Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="customCursor"></div>
+    <div class="custom-cursor-trail" id="cursorTrail"></div>
+
+    <!-- Particle Background -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Sticky Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                TR<span>.</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#tools" class="nav-link">Tools</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay">
+        <nav class="mobile-nav-links">
+            <a href="#about" class="mobile-nav-link">About</a>
+            <a href="#skills" class="mobile-nav-link">Skills</a>
+            <a href="#experience" class="mobile-nav-link">Experience</a>
+            <a href="#projects" class="mobile-nav-link">Projects</a>
+            <a href="#tools" class="mobile-nav-link">Tools</a>
+            <a href="#education" class="mobile-nav-link">Education</a>
+            <a href="#contact" class="mobile-nav-link">Contact</a>
+        </nav>
+    </div>
+
+    <main>
+        <!-- 1. HERO SECTION -->
+        <section id="hero" class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <span class="hero-pretitle scroll-reveal">Hello, I'm</span>
+                    <h1 class="hero-title scroll-reveal">Tharun Ram</h1>
+                    <h2 class="hero-subtitle scroll-reveal">UI/UX Designer</h2>
+                    
+                    <div class="tagline-container scroll-reveal">
+                        <span class="tagline-static">I build</span>
+                        <div class="tagline-rotate">
+                            <span class="tagline-item active">User-Centered Design</span>
+                            <span class="tagline-item">Wireframes & Prototypes</span>
+                            <span class="tagline-item">Seamless Digital Experiences</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-ctas scroll-reveal">
+                        <a href="#projects" class="btn btn-primary magnetic" data-dist="0.3">
+                            <span>View My Work</span>
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-outline magnetic" data-dist="0.3">
+                            <span>Contact Me</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="#about" class="scroll-indicator" aria-label="Scroll to About Section">
+                <span class="mouse-icon">
+                    <span class="scroll-wheel"></span>
+                </span>
+                <i data-lucide="chevrons-down" class="bounce-arrow"></i>
+            </a>
+        </section>
+
+        <!-- 2. ABOUT SECTION -->
+        <section id="about" class="section about-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">About Me</h2>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="about-info scroll-reveal">
+                        <p class="bio-text">
+                            Aspiring UI/UX Designer skilled in user-centered design, wireframing, prototyping, interaction design, and responsive web design. Passionate about creating seamless digital experiences, solving design challenges, and collaborating with cross-functional teams.
+                        </p>
+                        
+                        <div class="skills-wrapper">
+                            <h3 class="skills-title">Core Skills</h3>
+                            <div class="skills-chips">
+                                <span class="skill-chip">User Research</span>
+                                <span class="skill-chip">Wireframing & Prototyping</span>
+                                <span class="skill-chip">Interaction Design</span>
+                                <span class="skill-chip">Information Architecture</span>
+                                <span class="skill-chip">User Testing</span>
+                                <span class="skill-chip">Responsive Design</span>
+                                <span class="skill-chip">HTML/CSS</span>
+                                <span class="skill-chip">Visual Design & Branding</span>
+                                <span class="skill-chip">Usability & Accessibility</span>
+                                <span class="skill-chip">Design Systems & Style Guides</span>
+                                <span class="skill-chip">Collaboration & Communication</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-visual scroll-reveal">
+                        <div class="avatar-container">
+                            <div class="avatar-glow"></div>
+                            <!-- Minimal Animated Abstract Avatar/Portrait Geometric Design -->
+                            <svg class="abstract-avatar" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="violet-teal" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#7B5CF0" />
+                                        <stop offset="100%" stop-color="#1DB87F" />
+                                    </linearGradient>
+                                    <linearGradient id="violet-glow" x1="0%" y1="100%" x2="100%" y2="0%">
+                                        <stop offset="0%" stop-color="#7B5CF0" stop-opacity="0.2"/>
+                                        <stop offset="100%" stop-color="#1DB87F" stop-opacity="0.8"/>
+                                    </linearGradient>
+                                </defs>
+                                <!-- Abstract rotating shapes -->
+                                <rect class="geom-shape shape-1" x="40" y="40" width="120" height="120" rx="20" fill="none" stroke="url(#violet-teal)" stroke-width="2" />
+                                <circle class="geom-shape shape-2" cx="100" cy="100" r="50" fill="none" stroke="url(#violet-teal)" stroke-width="1.5" stroke-dasharray="10 5" />
+                                <polygon class="geom-shape shape-3" points="100,25 165,138 35,138" fill="none" stroke="#1DB87F" stroke-width="1" opacity="0.6" />
+                                
+                                <!-- Core Portrait Node -->
+                                <circle cx="100" cy="100" r="25" fill="url(#violet-glow)" stroke="#7B5CF0" stroke-width="2" />
+                                <circle cx="100" cy="100" r="8" fill="#1DB87F" class="pulse-core" />
+                                
+                                <!-- Crosshairs & tech coordinates -->
+                                <line x1="100" y1="10" x2="100" y2="190" stroke="#7B5CF0" stroke-width="0.5" opacity="0.3" stroke-dasharray="4 4" />
+                                <line x1="10" y1="100" x2="190" y2="100" stroke="#7B5CF0" stroke-width="0.5" opacity="0.3" stroke-dasharray="4 4" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="section skills-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Skills</h2>
+                </div>
+
+                <div class="skills-cloud">
+                    <div class="skill-tag scroll-reveal"><i class="ti ti-sparkles"></i><span>AI-Powered Design</span></div>
+                    <div class="skill-tag scroll-reveal"><i class="ti ti-target-arrow"></i><span>UX Strategy</span></div>
+                    <div class="skill-tag scroll-reveal"><i class="ti ti-accessible"></i><span>Accessible Design</span></div>
+                    <div class="skill-tag scroll-reveal"><i class="ti ti-layout-grid"></i><span>Design Systems</span></div>
+                    <div class="skill-tag scroll-reveal"><i class="ti ti-devices"></i><span>Responsive Web Design</span></div>
+                    <div class="skill-tag scroll-reveal"><i class="ti ti-sitemap"></i><span>Information Architecture</span></div>
+                    <div class="skill-tag scroll-reveal"><i class="ti ti-clipboard-check"></i><span>Usability Testing</span></div>
+                    <div class="skill-tag scroll-reveal"><i class="ti ti-palette"></i><span>Visual Design</span></div>
+                    <div class="skill-tag scroll-reveal"><i class="ti ti-click"></i><span>Interaction Design</span></div>
+                    <div class="skill-tag scroll-reveal"><i class="ti ti-search"></i><span>UX Research</span></div>
+                    <div class="skill-tag scroll-reveal"><i class="ti ti-user-check"></i><span>User Experience (UX)</span></div>
+                    <div class="skill-tag scroll-reveal"><i class="ti ti-app-window"></i><span>User Interface Prototyping</span></div>
+                    <div class="skill-tag scroll-reveal"><i class="ti ti-pencil-minus"></i><span>Wireframing</span></div>
+                    <div class="skill-tag scroll-reveal"><i class="ti ti-brand-css3"></i><span>Cascading Style Sheets (CSS)</span></div>
+                    <div class="skill-tag scroll-reveal"><i class="ti ti-brand-html5"></i><span>HTML</span></div>
+                    <div class="skill-tag scroll-reveal"><i class="ti ti-photo-edit"></i><span>Adobe Photoshop</span></div>
+                    <div class="skill-tag scroll-reveal"><i class="ti ti-vector"></i><span>Adobe Illustrator</span></div>
+                    <div class="skill-tag scroll-reveal"><i class="ti ti-brush"></i><span>User Experience Design (UED)</span></div>
+                    <div class="skill-tag scroll-reveal"><i class="ti ti-wand"></i><span>UI UX Designer</span></div>
+                    <div class="skill-tag scroll-reveal"><i class="ti ti-layout"></i><span>User Interface Design</span></div>
+                    <div class="skill-tag scroll-reveal"><i class="ti ti-brand-figma"></i><span>Figma</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. EXPERIENCE SECTION -->
+        <section id="experience" class="section experience-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Experience</h2>
+                </div>
+                
+                <div class="experience-timeline">
+                    <div class="experience-card scroll-reveal">
+                        <div class="exp-header">
+                            <div class="exp-role-company">
+                                <h3 class="exp-role">UI/UX Designer</h3>
+                                <span class="exp-company">ImagiNET Ventures</span>
+                            </div>
+                            <span class="exp-date">Dec 2024 – Present</span>
+                        </div>
+                        
+                        <ul class="exp-bullets">
+                            <li class="exp-bullet">Designed user-centric UI/UX solutions, wireframes, and high-fidelity prototypes using Figma, following usability and accessibility best practices.</li>
+                            <li class="exp-bullet">Created responsive web designs, landing pages, and layout systems optimized for desktop and mobile experiences.</li>
+                            <li class="exp-bullet">Developed graphic design assets including banners, social media creatives, infographics, and marketing visuals aligned with brand identity.</li>
+                            <li class="exp-bullet">Collaborated with stakeholders and developers to translate requirements into functional, visually consistent digital interfaces.</li>
+                            <li class="exp-bullet">Conducted iterative design improvements based on feedback to enhance user experience, visual hierarchy, and consistency.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects" class="section projects-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">My Projects</h2>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1: Raus -->
+                    <div class="project-card tilt-card scroll-reveal" data-tilt>
+                        <div class="project-card-header">
+                            <img class="project-logo" src="https://www.google.com/s2/favicons?domain=raus.ae&sz=64" alt="Raus logo" width="48" height="48" />
+                            <h3 class="project-name">Raus</h3>
+                        </div>
+                        <p class="project-desc">A modern digital platform offering premium services and seamless user experiences in the UAE market.</p>
+                        <a href="https://www.raus.ae/" target="_blank" rel="noopener noreferrer" class="project-visit-btn">
+                            <span>Visit Site</span>
+                            <i data-lucide="external-link"></i>
+                        </a>
+                    </div>
+
+                    <!-- Project 2: Aetram CSP -->
+                    <div class="project-card tilt-card scroll-reveal" data-tilt>
+                        <div class="project-card-header">
+                            <img class="project-logo" src="https://www.google.com/s2/favicons?domain=aetramcsp.ae&sz=64" alt="Aetram CSP logo" width="48" height="48" />
+                            <h3 class="project-name">Aetram CSP</h3>
+                        </div>
+                        <p class="project-desc">A professional corporate solutions platform designed for business services and compliance in the UAE.</p>
+                        <a href="https://www.aetramcsp.ae/" target="_blank" rel="noopener noreferrer" class="project-visit-btn">
+                            <span>Visit Site</span>
+                            <i data-lucide="external-link"></i>
+                        </a>
+                    </div>
+
+                    <!-- Project 3: FlexPro -->
+                    <div class="project-card tilt-card scroll-reveal" data-tilt>
+                        <div class="project-card-header">
+                            <img class="project-logo" src="https://www.google.com/s2/favicons?domain=flexpro.ae&sz=64" alt="FlexPro logo" width="48" height="48" />
+                            <h3 class="project-name">FlexPro</h3>
+                        </div>
+                        <p class="project-desc">A flexible and dynamic service platform delivering tailored professional solutions across the UAE.</p>
+                        <a href="https://flexpro.ae/" target="_blank" rel="noopener noreferrer" class="project-visit-btn">
+                            <span>Visit Site</span>
+                            <i data-lucide="external-link"></i>
+                        </a>
+                    </div>
+
+                    <!-- Project 4: Indeco Hotels -->
+                    <div class="project-card tilt-card scroll-reveal" data-tilt>
+                        <div class="project-card-header">
+                            <img class="project-logo" src="https://www.google.com/s2/favicons?domain=indecohotels.com&sz=64" alt="Indeco Hotels logo" width="48" height="48" />
+                            <h3 class="project-name">Indeco Hotels</h3>
+                        </div>
+                        <p class="project-desc">A hospitality brand website showcasing elegant hotel experiences and seamless online booking journeys.</p>
+                        <a href="https://indecohotels.com/" target="_blank" rel="noopener noreferrer" class="project-visit-btn">
+                            <span>Visit Site</span>
+                            <i data-lucide="external-link"></i>
+                        </a>
+                    </div>
+
+                    <!-- Project 5: Besmak -->
+                    <div class="project-card tilt-card scroll-reveal" data-tilt>
+                        <div class="project-card-header">
+                            <img class="project-logo" src="https://www.glassdoor.co.in/imgproxy/YRFg2BsdBUpCAbndMdUCo45mzYgVCOIymaUanhYmHeI/rs::46:46/aHR0cHM6Ly9tZWRpYS5nbGFzc2Rvb3IuY29tL3NxbC8zMjczNDE1L2Jlc21hay1jb21wb25lbnRzLXNxdWFyZWxvZ28tMTY2NDQzMzIyNjEzNy5wbmc" alt="Besmak logo" width="48" height="48" />
+                            <h3 class="project-name">Besmak</h3>
+                        </div>
+                        <p class="project-desc">A dynamic web application built for an Indian brand delivering a clean and engaging digital presence.</p>
+                        <a href="https://besmak-india-live.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-visit-btn">
+                            <span>Visit Site</span>
+                            <i data-lucide="external-link"></i>
+                        </a>
+                    </div>
+
+                    <!-- Project 6: India Rise -->
+                    <div class="project-card tilt-card scroll-reveal" data-tilt>
+                        <div class="project-card-header">
+                            <img class="project-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuRTB2UnTdmtFJicUl5Z3d5TQh3oysUU2DQA&s" alt="India Rise logo" width="48" height="48" />
+                            <h3 class="project-name">India Rise</h3>
+                        </div>
+                        <p class="project-desc">A fellowship platform empowering the next generation of Indian leaders through community and opportunity.</p>
+                        <a href="https://indiarisefellowship.in/" target="_blank" rel="noopener noreferrer" class="project-visit-btn">
+                            <span>Visit Site</span>
+                            <i data-lucide="external-link"></i>
+                        </a>
+                    </div>
+
+                    <!-- Project 7: Kutti Kasi -->
+                    <div class="project-card tilt-card scroll-reveal" data-tilt>
+                        <div class="project-card-header">
+                            <img class="project-logo" src="https://www.google.com/s2/favicons?domain=kuttikasi.com&sz=64" alt="Kutti Kasi logo" width="48" height="48" style="object-fit:contain; border-radius:10px;"/>
+                            <h3 class="project-name">Kutti Kasi</h3>
+                        </div>
+                        <p class="project-desc">A playful and engaging digital platform designed to deliver fun and interactive experiences for young audiences.</p>
+                        <a href="https://kuttikasi.com/" target="_blank" rel="noopener noreferrer" class="project-visit-btn">
+                            <span>Visit Site</span>
+                            <i data-lucide="external-link"></i>
+                        </a>
+                    </div>
+
+                    <!-- Project 8: Prompt ITC -->
+                    <div class="project-card tilt-card scroll-reveal" data-tilt>
+                        <div class="project-card-header">
+                            <img class="project-logo" src="https://www.google.com/s2/favicons?domain=promptitc.com&sz=64" alt="Prompt ITC logo" width="48" height="48" style="object-fit:contain; border-radius:10px;"/>
+                            <h3 class="project-name">Prompt ITC</h3>
+                        </div>
+                        <p class="project-desc">A technology and consulting platform offering smart digital solutions for modern business challenges.</p>
+                        <a href="https://promptitc.com/" target="_blank" rel="noopener noreferrer" class="project-visit-btn">
+                            <span>Visit Site</span>
+                            <i data-lucide="external-link"></i>
+                        </a>
+                    </div>
+
+                    <!-- Project 9: Mira Healthcare -->
+                    <div class="project-card tilt-card scroll-reveal" data-tilt>
+                        <div class="project-card-header">
+                            <img class="project-logo" src="https://www.google.com/s2/favicons?domain=mirahealthcare.in&sz=64" alt="Mira Healthcare logo" width="48" height="48" style="object-fit:contain; border-radius:10px;"/>
+                            <h3 class="project-name">Mira Healthcare</h3>
+                        </div>
+                        <p class="project-desc">A healthcare digital platform providing accessible medical services and patient-centered online experiences.</p>
+                        <a href="https://mirahealthcare.in/" target="_blank" rel="noopener noreferrer" class="project-visit-btn">
+                            <span>Visit Site</span>
+                            <i data-lucide="external-link"></i>
+                        </a>
+                    </div>
+
+                    <!-- Project 10: ISACA Silicon Valley -->
+                    <div class="project-card tilt-card scroll-reveal" data-tilt>
+                        <div class="project-card-header">
+                            <img class="project-logo" src="https://www.google.com/s2/favicons?domain=isacasiliconvalley.org&sz=64" alt="ISACA Silicon Valley logo" width="48" height="48" style="object-fit:contain; border-radius:10px;"/>
+                            <h3 class="project-name">ISACA Silicon Valley</h3>
+                        </div>
+                        <p class="project-desc">A professional chapter website for IT governance and cybersecurity community in Silicon Valley.</p>
+                        <a href="https://isacasiliconvalley.org/" target="_blank" rel="noopener noreferrer" class="project-visit-btn">
+                            <span>Visit Site</span>
+                            <i data-lucide="external-link"></i>
+                        </a>
+                    </div>
+
+                    <!-- Project 11: Bharatha Natyalaya -->
+                    <div class="project-card tilt-card scroll-reveal" data-tilt>
+                        <div class="project-card-header">
+                            <img class="project-logo" src="https://www.google.com/s2/favicons?domain=rojakannan.in&sz=64" alt="Bharatha Natyalaya logo" width="48" height="48" style="object-fit:contain; border-radius:10px;"/>
+                            <h3 class="project-name">Bharatha Natyalaya</h3>
+                        </div>
+                        <p class="project-desc">A classical dance academy website celebrating the art of Bharatanatyam with elegant design and cultural storytelling.</p>
+                        <a href="https://rojakannan.in/" target="_blank" rel="noopener noreferrer" class="project-visit-btn">
+                            <span>Visit Site</span>
+                            <i data-lucide="external-link"></i>
+                        </a>
+                    </div>
+
+                    <!-- Project 12: Vertikal -->
+                    <div class="project-card tilt-card scroll-reveal" data-tilt>
+                        <div class="project-card-header">
+                            <img class="project-logo" src="https://vertikalme.com/wp-content/uploads/2025/08/Vertikal-logo.png" alt="Vertikal logo" width="48" height="48" style="object-fit:contain; border-radius:10px;"/>
+                            <h3 class="project-name">Vertikal</h3>
+                        </div>
+                        <p class="project-desc">A modern personal branding and portfolio platform built for professionals to showcase their vertical expertise.</p>
+                        <a href="https://vertikalme.com/" target="_blank" rel="noopener noreferrer" class="project-visit-btn">
+                            <span>Visit Site</span>
+                            <i data-lucide="external-link"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. TOOLS & SKILLS SECTION -->
+        <section id="tools" class="section tools-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Tools I Use</h2>
+                </div>
+
+                <!-- Category 1 — Design & Dev Tools -->
+                <div class="tool-category">
+                    <h3 class="tool-category-title">Design & Dev Tools</h3>
+                    <div class="tools-grid">
+                        <!-- Figma -->
+                        <div class="tool-card tilt-card" data-tilt>
+                            <div class="tool-icon-wrapper">
+                                <img class="tool-icon" src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" width="40" height="40" style="object-fit:contain"/>
+                            </div>
+                            <h3 class="tool-name">Figma</h3>
+                            <p class="tool-description">Collaborative interface design and prototyping.</p>
+                            <div class="tool-proficiency" aria-label="5 out of 5 proficiency">
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                            </div>
+                        </div>
+                        
+                        <!-- Photoshop -->
+                        <div class="tool-card tilt-card" data-tilt>
+                            <div class="tool-icon-wrapper">
+                                <img class="tool-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/960px-Adobe_Photoshop_CC_icon.svg.png" width="40" height="40" style="object-fit:contain"/>
+                            </div>
+                            <h3 class="tool-name">Adobe Photoshop</h3>
+                            <p class="tool-description">Advanced photo editing and digital imaging.</p>
+                            <div class="tool-proficiency" aria-label="4 out of 5 proficiency">
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot"></span>
+                            </div>
+                        </div>
+                        
+                        <!-- Illustrator -->
+                        <div class="tool-card tilt-card" data-tilt>
+                            <div class="tool-icon-wrapper">
+                                <img class="tool-icon" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/adobe-illustrator-icon.png" width="40" height="40" style="object-fit:contain"/>
+                            </div>
+                            <h3 class="tool-name">Adobe Illustrator</h3>
+                            <p class="tool-description">Vector graphics, branding, and illustration.</p>
+                            <div class="tool-proficiency" aria-label="4 out of 5 proficiency">
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot"></span>
+                            </div>
+                        </div>
+                        
+                        <!-- Adobe XD -->
+                        <div class="tool-card tilt-card" data-tilt>
+                            <div class="tool-icon-wrapper">
+                                <img class="tool-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Adobe_XD_CC_icon.svg/960px-Adobe_XD_CC_icon.svg.png" width="40" height="40" style="object-fit:contain"/>
+                            </div>
+                            <h3 class="tool-name">Adobe XD</h3>
+                            <p class="tool-description">UI/UX design, wireframing, and prototyping.</p>
+                            <div class="tool-proficiency" aria-label="4 out of 5 proficiency">
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot"></span>
+                            </div>
+                        </div>
+                        
+                        <!-- VS Code -->
+                        <div class="tool-card tilt-card" data-tilt>
+                            <div class="tool-icon-wrapper">
+                                <img class="tool-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/960px-Visual_Studio_Code_1.35_icon.svg.png" width="40" height="40" style="object-fit:contain"/>
+                            </div>
+                            <h3 class="tool-name">Visual Studio Code</h3>
+                            <p class="tool-description">Code editor for modern web development.</p>
+                            <div class="tool-proficiency" aria-label="4 out of 5 proficiency">
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot"></span>
+                            </div>
+                        </div>
+                        
+                        <!-- Sketch -->
+                        <div class="tool-card tilt-card" data-tilt>
+                            <div class="tool-icon-wrapper">
+                                <img class="tool-icon" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/sketch-icon.png" width="40" height="40" style="object-fit:contain"/>
+                            </div>
+                            <h3 class="tool-name">Sketch</h3>
+                            <p class="tool-description">Interface design and collaborative workflows.</p>
+                            <div class="tool-proficiency" aria-label="4 out of 5 proficiency">
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot"></span>
+                            </div>
+                        </div>
+                        
+                        <!-- Miro -->
+                        <div class="tool-card tilt-card" data-tilt>
+                            <div class="tool-icon-wrapper">
+                                <img class="tool-icon" src="https://static.cdnlogo.com/logos/m/32/miro.svg" width="40" height="40" style="object-fit:contain"/>
+                            </div>
+                            <h3 class="tool-name">Miro</h3>
+                            <p class="tool-description">Visual collaboration, brainstorming, and planning.</p>
+                            <div class="tool-proficiency" aria-label="4 out of 5 proficiency">
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot"></span>
+                            </div>
+                        </div>
+     
+                        <!-- Antigravity -->
+                        <div class="tool-card tilt-card" data-tilt>
+                            <div class="tool-icon-wrapper">
+                                <img class="tool-icon" src="https://pnghdpro.com/wp-content/themes/pnghdpro/download/social-media-and-brands/google-antigravity-logo-icon.png" width="40" height="40" style="object-fit:contain"/>
+                            </div>
+                            <h3 class="tool-name">Antigravity</h3>
+                            <p class="tool-description">AI-powered website generation and development.</p>
+                            <div class="tool-proficiency" aria-label="4 out of 5 proficiency">
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot"></span>
+                            </div>
+                        </div>
+
+                        <!-- Canva -->
+                        <div class="tool-card tilt-card" data-tilt>
+                            <div class="tool-icon-wrapper">
+                                <img class="tool-icon" src="https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHHFT949fUipzkiFOBH3fAiZZUCdYojwUyX2aTonS1aIwMrx6NUIsHfUHSLzjGJFxxo4K81Ei7WzcnqEk8W.MgwZKGOGyylNO5Zmpypx72dKW30JQijPB.R5zwcpxtBwH3OJlEQGtDjjqpeLMKnjHhi8-&format=source" width="40" height="40" style="object-fit:contain; border-radius:8px;" alt="Canva logo"/>
+                            </div>
+                            <h3 class="tool-name">Canva</h3>
+                            <p class="tool-description">Visual design platform for graphics, presentations and branding.</p>
+                            <div class="tool-proficiency" aria-label="5 out of 5 proficiency">
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 2 — AI-Powered Tools -->
+                <div class="tool-category">
+                    <h3 class="tool-category-title">AI-Powered Tools</h3>
+                    <div class="tools-grid">
+                        <!-- Google Nano Bana -->
+                        <div class="tool-card tilt-card" data-tilt>
+                            <div class="tool-icon-wrapper">
+                                <img class="tool-icon" src="https://images.news18.com/ibnlive/uploads/2025/09/Google-Geminis-Nano-Banana-trend-1-2025-09-7be25199787da3f1a6dc3d7a99cfdd6f.jpeg" width="40" height="40" style="object-fit:contain; border-radius:8px;" alt="Google Nano Bana logo"/>
+                            </div>
+                            <h3 class="tool-name">Google Nano Bana</h3>
+                            <p class="tool-description">AI-powered micro model for on-device intelligent tasks.</p>
+                            <div class="tool-proficiency" aria-label="5 out of 5 proficiency">
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                            </div>
+                        </div>
+
+                        <!-- Google Veo -->
+                        <div class="tool-card tilt-card" data-tilt>
+                            <div class="tool-icon-wrapper">
+                                <img class="tool-icon" src="https://webtechneeq.com/blog/wp-content/uploads/2025/06/Google-Veo-3-1024x576.webp" width="40" height="40" style="object-fit:contain; border-radius:8px;" alt="Google Veo logo"/>
+                            </div>
+                            <h3 class="tool-name">Google Veo</h3>
+                            <p class="tool-description">Google's advanced AI video generation and creation tool.</p>
+                            <div class="tool-proficiency" aria-label="5 out of 5 proficiency">
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                            </div>
+                        </div>
+
+                        <!-- Google Stitch -->
+                        <div class="tool-card tilt-card" data-tilt>
+                            <div class="tool-icon-wrapper">
+                                <img class="tool-icon" src="https://miro.medium.com/1*6x04bXVqveDp_yZzAs22fQ.png" width="40" height="40" style="object-fit:contain; border-radius:8px;" alt="Google Stitch logo"/>
+                            </div>
+                            <h3 class="tool-name">Google Stitch</h3>
+                            <p class="tool-description">AI-powered UI design and prototyping tool by Google.</p>
+                            <div class="tool-proficiency" aria-label="5 out of 5 proficiency">
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                            </div>
+                        </div>
+
+                        <!-- Google Labs -->
+                        <div class="tool-card tilt-card" data-tilt>
+                            <div class="tool-icon-wrapper">
+                                <img class="tool-icon" src="https://aitoolsforest.com/wp-content/uploads/2025/08/Stitch.png" width="40" height="40" style="object-fit:contain; border-radius:8px;" alt="Google Labs logo"/>
+                            </div>
+                            <h3 class="tool-name">Google Labs</h3>
+                            <p class="tool-description">Google's experimental platform for exploring and testing cutting-edge AI-powered tools and innovations.</p>
+                            <div class="tool-proficiency" aria-label="5 out of 5 proficiency">
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                            </div>
+                        </div>
+
+                        <!-- Lovable -->
+                        <div class="tool-card tilt-card" data-tilt>
+                            <div class="tool-icon-wrapper">
+                                <img class="tool-icon" src="https://play-lh.googleusercontent.com/75PwQQWLgx6THbzPYDaOppqaNqZhU931T2VXv64dXQ5PXZYbGu82ubhdbtwTPYB248dieuiQkDNIGDamaJQ1_w=w240-h480-rw" width="40" height="40" style="object-fit:contain; border-radius:8px;" alt="Lovable logo"/>
+                            </div>
+                            <h3 class="tool-name">Lovable</h3>
+                            <p class="tool-description">AI-powered app builder for creating full-stack web applications.</p>
+                            <div class="tool-proficiency" aria-label="5 out of 5 proficiency">
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                            </div>
+                        </div>
+
+                        <!-- Bolt.ai -->
+                        <div class="tool-card tilt-card" data-tilt>
+                            <div class="tool-icon-wrapper">
+                                <img class="tool-icon" src="https://my24hrshop.com/storage/2025/12/Bolt.new_bolt.new_.jpg" width="40" height="40" style="object-fit:contain; border-radius:8px;" alt="Bolt.ai logo"/>
+                            </div>
+                            <h3 class="tool-name">Bolt.ai</h3>
+                            <p class="tool-description">AI-powered development platform for building and deploying apps fast.</p>
+                            <div class="tool-proficiency" aria-label="5 out of 5 proficiency">
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                            </div>
+                        </div>
+
+                        <!-- Readdy AI -->
+                        <div class="tool-card tilt-card" data-tilt>
+                            <div class="tool-icon-wrapper">
+                                <img class="tool-icon" src="https://hdrobots.com/wp-content/uploads/2025/08/readdy-ai-logo.webp" width="40" height="40" style="object-fit:contain; border-radius:8px;" alt="Readdy AI logo"/>
+                            </div>
+                            <h3 class="tool-name">Readdy AI</h3>
+                            <p class="tool-description">AI design assistant for generating UI layouts and design assets.</p>
+                            <div class="tool-proficiency" aria-label="5 out of 5 proficiency">
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. EDUCATION & CERTIFICATIONS SECTION -->
+        <section id="education" class="section education-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Education & Certifications</h2>
+                </div>
+                
+                <div class="education-grid">
+                    <!-- Left: Timeline -->
+                    <div class="timeline-container scroll-reveal">
+                        <div class="timeline-track"></div>
+                        
+                        <!-- Timeline Item 1 -->
+                        <div class="timeline-item">
+                            <div class="timeline-icon">
+                                <i data-lucide="graduation-cap"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2021 – 2024</span>
+                                <h3 class="timeline-title">B.Sc. Computer Science</h3>
+                                <p class="timeline-institution">Sathyabama Institute of Science and Technology</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Timeline Item 2 -->
+                        <div class="timeline-item">
+                            <div class="timeline-icon">
+                                <i data-lucide="award"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">Feb 2024 – Jun 2024</span>
+                                <h3 class="timeline-title">UI/UX Design Certification</h3>
+                                <p class="timeline-institution">WEB D School</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Achievements Grid -->
+                    <div class="achievements-container scroll-reveal">
+                        <h3 class="achievements-section-title">Key Achievements</h3>
+                        <div class="achievements-grid">
+                            <div class="achievement-card">
+                                <div class="achievement-icon-box">
+                                    <i data-lucide="check-circle" class="achievement-icon"></i>
+                                </div>
+                                <p class="achievement-text">Certified in UI/UX Design — WEBD School</p>
+                            </div>
+                            <div class="achievement-card">
+                                <div class="achievement-icon-box">
+                                    <i data-lucide="trophy" class="achievement-icon"></i>
+                                </div>
+                                <p class="achievement-text">Awarded Winning Certificate in UI/UX Design — WEBD School</p>
+                            </div>
+                            <div class="achievement-card">
+                                <div class="achievement-icon-box">
+                                    <i data-lucide="award" class="achievement-icon"></i>
+                                </div>
+                                <p class="achievement-text">Certificate in UI/UX Design: Frame Perfect — ImagiNET Ventures</p>
+                            </div>
+                            <div class="achievement-card">
+                                <div class="achievement-icon-box">
+                                    <i data-lucide="shield-check" class="achievement-icon"></i>
+                                </div>
+                                <p class="achievement-text">Certificate in UI/UX Design: Mockup Maestro — ImagiNET Ventures</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. CONTACT SECTION -->
+        <section id="contact" class="section contact-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Let's Connect</h2>
+                </div>
+                
+                <div class="contact-grid">
+                    <div class="contact-info scroll-reveal">
+                        <p class="contact-lead-text">Open to new opportunities and collaborations.</p>
+                        
+                        <div class="contact-details">
+                            <a href="mailto:tharunram204@gmail.com" class="contact-item magnetic" data-dist="0.15">
+                                <div class="contact-icon-wrapper">
+                                    <i data-lucide="mail"></i>
+                                </div>
+                                <div class="contact-text-box">
+                                    <span class="contact-label">Email</span>
+                                    <span class="contact-value">tharunram204@gmail.com</span>
+                                </div>
+                            </a>
+                            
+                            <a href="tel:+919360241509" class="contact-item magnetic" data-dist="0.15">
+                                <div class="contact-icon-wrapper">
+                                    <i data-lucide="phone"></i>
+                                </div>
+                                <div class="contact-text-box">
+                                    <span class="contact-label">Phone</span>
+                                    <span class="contact-value">9360241509</span>
+                                </div>
+                            </a>
+                            
+                            <div class="contact-item magnetic" data-dist="0.15">
+                                <div class="contact-icon-wrapper">
+                                    <i data-lucide="map-pin"></i>
+                                </div>
+                                <div class="contact-text-box">
+                                    <span class="contact-label">Location</span>
+                                    <span class="contact-value">Chennai, India</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="contact-form-container scroll-reveal">
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="formName" class="form-label">Name</label>
+                                <input type="text" id="formName" class="form-input" placeholder="Your Name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="formEmail" class="form-label">Email</label>
+                                <input type="email" id="formEmail" class="form-input" placeholder="yourname@example.com" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="formMessage" class="form-label">Message</label>
+                                <textarea id="formMessage" class="form-input form-textarea" placeholder="How can I help you?" rows="5" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-submit magnetic" data-dist="0.2">
+                                <span>Send Message</span>
+                                <i data-lucide="send"></i>
+                            </button>
+                            <div class="form-success-msg" id="formSuccessMsg">
+                                <i data-lucide="check-circle-2"></i> Message sent successfully!
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-divider"></div>
+        <div class="footer-container">
+            <p class="footer-text">&copy; 2026. Designed & Built by Tharun Ram.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
